@@ -14,27 +14,56 @@
    <string>Widget</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QLineEdit" name="lineEdit"/>
-   </item>
-   <item row="0" column="1">
-    <widget class="QSpinBox" name="spinBox"/>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="modeBox">
+     <item>
+      <property name="text">
+       <string>Close</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Server</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Slient</string>
+      </property>
+     </item>
+    </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QPlainTextEdit" name="plainTextEdit"/>
+    <widget class="QPlainTextEdit" name="sendText"/>
    </item>
-   <item row="1" column="1">
-    <widget class="QTextBrowser" name="textBrowser"/>
+   <item row="0" column="1">
+    <widget class="QSpinBox" name="portSpinBox">
+     <property name="minimum">
+      <number>1000</number>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>5376</number>
+     </property>
+    </widget>
    </item>
    <item row="2" column="0">
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="sendBtn">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="text">
       <string>Send</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
-    <widget class="QComboBox" name="comboBox"/>
+   <item row="0" column="0">
+    <widget class="QLineEdit" name="ipLineEdit"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QTextBrowser" name="receiveText"/>
    </item>
   </layout>
  </widget>

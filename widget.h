@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include "server.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -15,7 +16,11 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+    void modeSwitch(int index);
+
+
 private:
     Ui::Widget *ui;
+    Server *m_server = nullptr;
 };
 #endif // WIDGET_H
